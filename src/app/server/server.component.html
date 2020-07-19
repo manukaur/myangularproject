@@ -1,0 +1,12 @@
+
+
+<input type="text" class="form-control" [(ngModel)]="ServerName">
+<button class="btn btn-primary" [disabled]="ServerName==''" (click)="onCreateServer()">Add Server</button>
+<p *ngIf="ServerCreated">{{serverText}}</p>
+
+
+<p [ngStyle]="{backgroundColor:getColor()}" [ngClass]="{online:ServerStatus==='online'}">Server {{ServerId}}  is  {{getServerStatus()}}</p>
+<p [ngStyle]="{backgroundColor:getColor()}">Server {{ServerId}}  is  {{getServerStatus()}}</p>
+
+
+<!--<input type="text" class="form-control" (input)="onUpdateServerName($event)">-->

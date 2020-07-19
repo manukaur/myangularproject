@@ -1,0 +1,3 @@
+<button class="btn btn-primary" (click)="toggleClick()"> Display Details</button>
+<p *ngIf="onClick" >Secret password='tuna'</p>
+<p *ngFor="let click of clicks" [ngStyle]="{backgroundColor:getColor()}">{{click}}</p>
